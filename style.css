@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0d0d0d;
+  color: #efefef;
+}
+
+.hero {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  background: #111;
+  border-bottom: 1px solid #222;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #cccccc;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 720px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: .5rem;
+  color: #8affc7;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: #dddddd;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.75rem;
+  background: #1b1b1b;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #efefef;
+  font-size: 0.95rem;
+}
+
+textarea {
+  min-height: 90px;
+}
+
+.generate-btn {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  background: #8affc7;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.generate-btn:hover {
+  background: #9effd0;
+}
+
+.footer-note {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #888;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think Before You Ping Me</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="hero">
+      <h1>Think Before You Ping Someone.</h1>
+
+      <p class="subtitle">
+        Before you ask someone for help, a favour, advice, or a project take a
+        moment to clearly explain what you actually need.
+      </p>
+
+      <p class="subtitle">
+        This form helps you prepare a clear request you can send to anyone
+        before you ping them. It saves everyone time including yours.
+      </p>
+    </header>
+
+    <main class="container">
+      <form id="specForm">
+        <h2>Your Details</h2>
+
+        <label>Your name *</label>
+        <input type="text" name="name" required />
+
+        <label
+          >How can the other person contact you? (Email / Phone / WhatsApp /
+          Telegram) *</label
+        >
+        <input type="text" name="contact" required />
+
+        <label>Title of your request *</label>
+        <input
+          type="text"
+          name="title"
+          placeholder="eg. Help reviewing my CV, Need advice, Need a favour"
+          required
+        />
+
+        <h2>What Do You Need?</h2>
+
+        <label>Describe what you need help with *</label>
+        <textarea
+          name="what"
+          placeholder="Explain clearly in a few sentences."
+          required
+        ></textarea>
+
+        <label>Why do you need this? What's the purpose?</label>
+        <textarea
+          name="why"
+          placeholder="Context helps the person understand your situation."
+        ></textarea>
+
+        <label
+          >Who is this for? (Yourself / a friend / team / client /
+          family)</label
+        >
+        <input type="text" name="who" />
+
+        <h2>Details & Expectations</h2>
+
+        <label>What exactly are you expecting from the other person? *</label>
+        <textarea
+          name="expect"
+          placeholder="Be specific. Eg: review, guidance, fix, feedback, time, etc."
+          required
+        ></textarea>
+
+        <label>Have you already tried something? If yes, what?</label>
+        <textarea name="tried"></textarea>
+
+        <label>Is there a deadline? (If yes, mention it)</label>
+        <input type="text" name="deadline" />
+
+        <label>Are you willing to pay for help? If yes, how much?</label>
+        <input type="text" name="payment" placeholder="eg. Yes, up to ₹X / No / Not sure" />
+
+        <h2>Extra Information</h2>
+
+        <label>Any links, references, files, or examples?</label>
+        <textarea
+          name="links"
+          placeholder="Paste URLs, drive links, images, examples, etc."
+        ></textarea>
+
+        <label
+          >Anything the other person should NOT do? Or things you don't
+          want?</label
+        >
+        <textarea name="notwant"></textarea>
+
+        <label>What does ‘success’ look like for you?</label>
+        <textarea
+          name="success"
+          placeholder="What outcome would make you feel satisfied?"
+        ></textarea>
+
+        <button type="submit" class="generate-btn">
+          Generate My Request PDF
+        </button>
+      </form>
+
+      <p class="footer-note">
+        No data is uploaded. PDF is generated entirely in your browser.
+      </p>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
