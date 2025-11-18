@@ -10,6 +10,33 @@ body {
   line-height: 1.6;
 }
 
+.header-badge {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.header-badge a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(138, 255, 199, 0.1);
+  border: 1px solid #8affc7;
+  border-radius: 6px;
+  color: #8affc7;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.header-badge a:hover {
+  background: rgba(138, 255, 199, 0.15);
+  color: #5ef3d5;
+  border-color: #5ef3d5;
+  transform: translateY(-1px);
+}
+
 .hero {
   padding: 4rem 1.5rem;
   text-align: center;
@@ -218,6 +245,16 @@ form:hover h2 {
 
 /* Mobile responsiveness */
 @media (max-width: 640px) {
+  .header-badge {
+    top: 15px;
+    right: 15px;
+  }
+
+  .header-badge a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
   .hero {
     padding: 2.5rem 1rem;
   }

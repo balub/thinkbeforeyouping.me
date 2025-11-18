@@ -134,7 +134,8 @@ document.getElementById("specForm").addEventListener("submit", function (e) {
     bulletList(linkLines);
   }
 
-  // Add footer to all pages
+  // FOOTER: Add footer to all pages with clickable links
+  // TODO: Can be removed or simplified later
   const addFooter = () => {
     const totalPages = doc.internal.pages.length - 1;
     for (let i = 1; i <= totalPages; i++) {
@@ -143,25 +144,31 @@ document.getElementById("specForm").addEventListener("submit", function (e) {
       doc.setFontSize(8);
       doc.setTextColor(150, 150, 150);
 
+      // TODO: Consider moving timestamp to a shared location if needed
       const timestamp = new Date().toLocaleDateString("en-US", {
         year: "numeric",
         month: "short",
         day: "numeric",
       });
 
+      // First line: "Generated via [link] on [date]"
       doc.text(`Generated via`, margin, pageHeight - 20);
       doc.setTextColor(70, 150, 180);
-      doc.textWithLink("thinkbeforeyouping.me", margin + 66, pageHeight - 20, {
+      doc.textWithLink("thinkbeforeyouping.me", margin + 52, pageHeight - 20, {
         pageNumber: undefined,
         pageNumberUndefined: undefined,
         url: "https://thinkbeforeyouping.me",
       });
 
       doc.setTextColor(150, 150, 150);
-      doc.text(` on ${timestamp}`, margin + 158, pageHeight - 20);
+      doc.text(` on ${timestamp}`, margin + 132, pageHeight - 20);
 
+      // Second line: GitHub star call-to-action
+      // TODO: This is the GitHub star CTA - can be customized or removed later
+      doc.setTextColor(150, 150, 150);
+      doc.text("Like this? ", margin, pageHeight - 12);
       doc.setTextColor(70, 150, 180);
-      doc.textWithLink("Star this project on GitHub", margin, pageHeight - 12, {
+      doc.textWithLink("Star on GitHub", margin + 38, pageHeight - 12, {
         pageNumber: undefined,
         pageNumberUndefined: undefined,
         url: "https://github.com/balub/thinkbeforeyouping.me",
